@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kirupa.com.ktask">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true">
+
+    </supports-screens>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+
+        </activity>
+        <activity
+            android:name=".Activity_Lifecycle"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_alifecycle"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Async"
+            android:label="@string/title_activity_async"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity3"
+            android:label="@string/title_activity_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RetrofitActivity_PostMethod"
+            android:label="@string/title_activity_retrofit"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+
+        <activity
+            android:name=".Retrofit_GetMethod"
+            android:label="@string/title_activity_retrofit__get_method"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            </activity>
+
+
+        <activity
+            android:name=".Retrofit_WithImage"
+            android:label="@string/title_activity_retrofit__with_image"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DBActivity"
+            android:label="@string/title_activity_db"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".IVY"
+            android:label="@string/title_activity_ivy"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+    </application>
+
+</manifest>

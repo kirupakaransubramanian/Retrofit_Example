@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+    defaultConfig {
+        applicationId "kirupa.com.ktask"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    splits {
+//        density {
+//            enable true
+//            reset()
+//            include "mdpi", "hdpi"
+//        }
+//        abi {
+//            enable true
+//            reset()
+//            include "x86", "x86_64"
+//        }
+//    }
+//    productFlavors {
+//        blueberry {
+//            minSdkVersion 15
+//            applicationId 'cabdriver.co1'
+//            targetSdkVersion 24
+//            versionCode 1
+//            versionName '1.0'
+//        }
+//        chocolate {
+//            minSdkVersion 19
+//            applicationId 'cabdriver.co2'
+//            targetSdkVersion 24
+//            versionCode 1
+//            versionName '1.0'
+//        }
+//        raspberry {
+//            minSdkVersion 19
+//            applicationId 'cabdriver.co3'
+//            targetSdkVersion 24
+//            versionCode 1
+//            versionName '1.0'
+//        }
+//    }
+
+    allprojects {
+        repositories {
+            jcenter()
+            maven {
+                url "https://maven.google.com"
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // dependency for Retrofit
+    // JSON Parsing
+    // dependency for RecyclerView
+
+
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:27.+'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    testCompile 'junit:junit:4.12'
+    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
+}
+
+
+
+
+
+
+
